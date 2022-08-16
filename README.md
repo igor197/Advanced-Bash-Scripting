@@ -1,2 +1,2 @@
 # Advanced-Bash-Scripting
-Advanced Bash-Scripting Guide Mendel Cooper
+Examples for Advanced Bash-Scripting Guide Mendel Cooper

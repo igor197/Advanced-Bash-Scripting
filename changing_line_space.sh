@@ -6,16 +6,26 @@
 #filename), and whether the specified file exists.
 #2 Part exerсises in file 'delete_empty_lines.sh'
 
+if [[ $# -ne 1 ]];then
+  echo "Enter file name"
+  exit
+fi
+
 if [[ ! -e $1 ]];then
   printf "%s\n" "File does not exist"
+  exit
 fi
+
+filename="$(echo $1 | cut -d. -f1)"
+extension="$(echo $1 | cut -d. -f2)"
+backupfilename="$filename-backup.$extension"
 
 while read line
 do 
-  printf "%s\n" "$line" >> test_backup.txt
-  echo >> test_backup.txt
-  echo >> test_backup.txt
-  echo >> test_backup.txt
+  printf "%s\n" "$line" >> $backupfilename 
+  echo >> $backupfilename
+  echo >> $backupfilename
+  echo >> $backupfilename
 done < $1 
 exit
 

@@ -5,7 +5,7 @@
 #Include all necessary code to check whether the script gets the necessary command-line argument (a
 #filename), and whether the specified file exists.
 
-filename="/root/My_scripts/Advanced_Bash/Advanced-Bash-Scripting/test_backup.txt"
+filename="/root/My_scripts/Advanced_Bash/Advanced-Bash-Scripting/test-backup.txt"
 
 while read line
 do

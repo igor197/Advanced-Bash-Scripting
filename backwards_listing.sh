@@ -10,13 +10,6 @@ do
   #echo ${array[@]}
 done < $filename
 
-#echo "${array[@]}"
-
-#for n in "${array[@]}";do
-#  echo $n
-#done
-
-
 count=${#array[@]}
 echo $count
 while [[ $count -ge 0 ]]

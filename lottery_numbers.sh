@@ -1,5 +1,12 @@
 #!/usr/bin/env /bin/bash
 
+#One type of lottery involves picking five different numbers, in the range of 1 - 50. Write a script that
+#generates five pseudorandom numbers in this range, with no duplicates. The script will give the
+#option of echoing the numbers to stdout or saving them to a file, along with the date and time the
+#particular number set was generated. (If your script consistently generates winning lottery numbers,
+#then you can retire on the proceeds and leave shell scripting to those of us who have to work for a
+#living.)
+
 win_numbers=()
 count = 0
 filename="win_numbers.txt"

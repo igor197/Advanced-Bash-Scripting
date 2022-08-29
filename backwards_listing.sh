@@ -1,5 +1,7 @@
 #!/usr/bin/env /bin/bash
 
+#Write a script that echoes itself to stdout, but backwards
+
 filename='backwards_listing.sh'
 
 array=()

@@ -1,5 +1,10 @@
 #!/usr/bin/env /bin/bash
 
+#Inactive accounts on a network waste disk space and may become a security risk. Write an
+#administrative script (to be invoked by root or the cron daemon) that checks for and deletes user
+#accounts that have not been accessed within the last 90 days
+
+
 array_username=()
 days=0
 seconds_in_days=$(( 86400 * $days  ))

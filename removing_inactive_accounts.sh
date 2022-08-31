@@ -1,6 +1,7 @@
 #!/usr/bin/env /bin/bash
 
-days=20
+array_username=()
+days=0
 seconds_in_days=$(( 86400 * $days  ))
 seconds_current=$(date +%s)
 count=0
@@ -27,6 +28,7 @@ while IFS='\n' read line
            echo "User \"$username\" logged in more than $days days ago"
            echo "Last login $day $month $year $hhmm"
            count=$(($count + 1))
+           array_username+="$username "
          fi
       elif [[ $count_word -eq 8 ]]
         then
@@ -40,6 +42,7 @@ while IFS='\n' read line
         then
           echo "User \"$username\" logged in more than $days days ago"
           echo "Last login $day $month $year $hhmm"
+          array_username+="$username "
           count=$(($count + 1))
         fi
       fi  
@@ -51,5 +54,18 @@ while IFS='\n' read line
     echo "No users logged in more than \"$days\" ago"
   fi
 
+echo ${array_username[@]}
+for name in ${array_username[@]}
+do
+  echo "Delete $name Y|N"
+  read var
+  case $var in
+    Y) echo "$name was delete";;
+       #rm -rf /home/$name
+       #userdel $name;;
+       
+    *) :;;
+  esac
+done
 rm -rf users_file
- exit
+exit
